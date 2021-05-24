@@ -14,7 +14,7 @@ public class DbInit {
         this.employeeRepository = employeeRepository;
     }
 
-//    @PostConstruct
+    @PostConstruct
     public void init(){
         Employee employee = new Employee();
         employee.setName("Abdul Halim");

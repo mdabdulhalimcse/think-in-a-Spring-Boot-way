@@ -21,17 +21,17 @@ public class DbInit {
 //    For Runtime Create or quick test
     @PostConstruct
     public void init(){
-      /*  Address address = new Address();
+        Address address = new Address();
         address.setCity("Dhaka");
         address.setCountry("Bangladesh");
-        address = addressRepository.save(address); //For MERGE
+//        address = addressRepository.save(address); //For MERGE
         Employee employee = new Employee();
         employee.setName("Abdul Halim");
         employee.setAddress(address);
         employee = employeeRepository.save(employee);
         System.out.println("Employee ID = "+employee.getId());
-        System.out.println("Address ID = "+address.getId());*/
-        Employee employee = employeeRepository.findById(Long.valueOf(4)).get();
-        employeeRepository.delete(employee);
+        System.out.println("Address ID = "+address.getId());
+//        Employee employee = employeeRepository.findById(Long.valueOf(4)).get();
+//        employeeRepository.delete(employee);
     }
 }

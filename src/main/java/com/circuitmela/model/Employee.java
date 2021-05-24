@@ -11,7 +11,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private  String name;
-    @OneToOne(cascade = CascadeType.REMOVE) // ALL,PERSIST,MERGE,REMOVE
+    @OneToOne(cascade = CascadeType.ALL) // ALL,PERSIST,MERGE,REMOVE
     @JoinColumn(name = "address_id",referencedColumnName = "id")
     private Address address;
 }

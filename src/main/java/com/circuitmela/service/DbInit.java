@@ -31,7 +31,7 @@ public class DbInit {
         employee = employeeRepository.save(employee);
         System.out.println("Employee ID = "+employee.getId());
         System.out.println("Address ID = "+address.getId());
-//        Employee employee = employeeRepository.findById(Long.valueOf(4)).get();
+//        Employee employee = employeeRepository.findById(Long.valueOf(1)).get();
 //        employeeRepository.delete(employee);
     }
 }

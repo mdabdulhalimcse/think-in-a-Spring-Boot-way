@@ -8,6 +8,7 @@ import com.circuitmela.repository.EmployeeRepository;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 
 @Configuration
 public class DbInit {
@@ -27,11 +28,13 @@ public class DbInit {
 //        address = addressRepository.save(address); //For MERGE
         Employee employee = new Employee();
         employee.setName("Abdul Halim");
-        employee.setAddress(address);
+        employee.setAddress(Arrays.asList(address));
         employee = employeeRepository.save(employee);
+        address.setEmployee(employee);
+        address = addressRepository.save(address);
         System.out.println("Employee ID = "+employee.getId());
         System.out.println("Address ID = "+address.getId());
-//        Employee employee = employeeRepository.findById(Long.valueOf(1)).get();
+//        Employee employee = employeeRepository.findById(Long.valueOf(4)).get();
 //        employeeRepository.delete(employee);
     }
 }

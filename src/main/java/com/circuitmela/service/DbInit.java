@@ -14,12 +14,13 @@ public class DbInit {
         this.employeeRepository = employeeRepository;
     }
 
-    @PostConstruct
-    public void init(){
-        Employee employee = new Employee();
-        employee.setName("Abdul Halim");
-        employee.setAddress("Dhaka");
-        employee = employeeRepository.save(employee);
-        System.out.println("E ID = "+employee.getId());
-    }
+////    For Runtime Create
+//    @PostConstruct
+//    public void init(){
+//        Employee employee = new Employee();
+//        employee.setName("Abdul Halim");
+//        employee.setAddress("Dhaka");
+//        employee = employeeRepository.save(employee);
+//        System.out.println("E ID = "+employee.getId());
+//    }
 }
